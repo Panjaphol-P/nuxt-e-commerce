@@ -42,6 +42,12 @@ const isLoggedIn = useState('isLoggedIn')
                             </div>
                         </div>
                         <div class="w-full flex flex-col gap-2">
+                            <span class="text-primary text-[16px]">Name</span>
+                            <div class="w-full rounded-md px-2.5 py-1.5 ring ring-primary">
+                                <span class="text-black">{{ signupData2.name }}</span>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col gap-2">
                             <span class="text-primary text-[16px]">Password</span>
                             <div class="w-full rounded-md px-2.5 py-1.5 ring ring-primary flex items-center">
                                 <span class="text-black w-full">

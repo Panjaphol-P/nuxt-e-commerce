@@ -1,13 +1,26 @@
 <script setup>
 definePageMeta({
-    layout: 'signIn',
+    layout: 'sign-in',
 })
 
 const show = ref(false)
 const password = ref('')
 
-const isLoggedIn = useState('isLoggedIn')
+const isLoggedIn = useState('isLoggedIn', () => false)
 
+// Initialize demo data for mockup
+const signupData1 = useState('signupData1', () => ({
+    username: 'DemoUser'
+}))
+const signupData2 = useState('signupData2', () => ({
+    email: 'demo@purea.com'
+}))
+
+// Add the handleSignIn function
+const handleSignIn = () => {
+    isLoggedIn.value = true
+    navigateTo('/home')
+}
 </script>
 
 <template>
@@ -18,7 +31,7 @@ const isLoggedIn = useState('isLoggedIn')
                 <h1 class="font-bold">Sign in</h1>
                 <div class="min-w-[371px]">
                     <UFormField label="Email or Username" class="mb-6">
-                        <UInput placeholder="Enter your email or username" color="primary" class="w-full" />
+                        <UInput v-model="signupData1.username" placeholder="Enter your email or username" color="primary" class="w-full" />
                     </UFormField>
 
                     <UFormField label="Password" class="mb-6">
@@ -47,7 +60,7 @@ const isLoggedIn = useState('isLoggedIn')
                         <UCheckbox label="Remember me" class="!label-primary" />
                         <NuxtLink to="/sign-in/forgot-password">Forgot password?</NuxtLink>
                     </div>
-                    <UButton to="/home" color="primary" variant="solid" @click="isLoggedIn = true"
+                    <UButton color="primary" variant="solid" @click="handleSignIn"
                         class="font-bold rounded-full w-full justify-center text-2xl my-6">Sign In</UButton>
                     <USeparator orientation="horizontal" class="w-full my-6" color="neutral">or</USeparator>
                     <div class="flex gap-6 justify-center my-6">

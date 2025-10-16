@@ -155,16 +155,17 @@ const countries = ref([
 ])
 
 const signupData2 = useState('signupData2', () => ({
-    email: '',
-    phone: '',
-    dateOfBirth: '',
-    streetAddress: '',
-    subdistrict: '',
-    district: '',
-    city: '',
-    province: '',
-    zipCode: '',
-    country: ''
+    name: 'Name Surname',
+    email: 'demo@purea.com',
+    phone: '+66 12 345 6789',
+    dateOfBirth: '01 / 01 / 1990',
+    streetAddress: '123 Demo Street',
+    subdistrict: 'Khlong Toei',
+    district: 'Khlong Toei',
+    city: 'Bangkok',
+    province: 'Bangkok',
+    zipCode: '10110',
+    country: 'Thailand'
 }))
 
 
@@ -185,8 +186,11 @@ const signupData2 = useState('signupData2', () => ({
                             <h1 class="!text-white">2</h1>
                         </div>
                     </div>
+                    <UFormField label="Name" required class="w-full">
+                        <UInput v-model="signupData2.name" class="w-full" color="primary" />
+                    </UFormField>
                     <UFormField label="Email" required class="w-full">
-                        <UInput class="w-full" color="primary" />
+                        <UInput  v-model="signupData2.email" class="w-full" color="primary" />
                     </UFormField>
                     <div class="w-full flex gap-8">
                         <UFormField label="Phone" class="w-full">

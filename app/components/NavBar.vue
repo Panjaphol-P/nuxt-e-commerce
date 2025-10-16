@@ -1,6 +1,6 @@
 <script setup>
-    const isLoggedIn = useState('isLoggedIn', () => false)
-    const language = ref(['TH', 'EN'])
+const isLoggedIn = useState('isLoggedIn', () => false)
+const language = ref(['TH', 'EN'])
 </script>
 
 <template>
@@ -24,7 +24,7 @@
             <div v-else class="flex items-center gap-6">
                 <USelect icon="i-lucide-globe" variant="ghost" default-value="TH" color="neutral" :items="language" class="!text-black" />
                 <UButton to="/account" color="neutral" icon="i-lucide-user-round" variant="ghost" class="rounded-full" />
-                <UButton to="/account" color="neutral" icon="i-lucide-heart" variant="ghost" class="rounded-full" />
+                <UButton to="/account/favorite" color="neutral" icon="i-lucide-heart" variant="ghost" class="rounded-full" />
                 <ShoppingCart />
             </div>
         </div>

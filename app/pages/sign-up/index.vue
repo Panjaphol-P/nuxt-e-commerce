@@ -4,7 +4,7 @@ definePageMeta({
 })
 
 const signupData1 = useState('signupData1', () => ({
-    username: '',
+    username: 'DemoUser',
     password: '',
     confirmPassword: ''
 }))
