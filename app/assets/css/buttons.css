@@ -1,0 +1,126 @@
+button:hover{
+    cursor:pointer
+}
+
+/* Type: Default */
+
+    /* Color: Black */
+
+.default-black{
+    font-family: "Helvetica", sans-serif;
+    background-color: white;
+    border: 0px;
+    color: black;
+    padding: 8px 16px;
+    width:fit-content;
+
+    justify-content: center;
+
+}
+
+.default-black:hover{ opacity: 0.5; }
+
+.default-black:active{ text-decoration: underline; }
+
+.default-black:link, .default-black:visited{ text-decoration: none; }
+
+    /* Color: Primary */
+
+.default-primary{
+    font-family: "Helvetica", sans-serif;
+    background-color: white;
+    border: 0;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    width:fit-content;
+
+    justify-content: center;
+}
+
+.default-primary:hover{ opacity: 0.5; }
+
+.default-primary:active{ text-decoration: underline; }
+
+.default-primary:link, .default-primary:visited { text-decoration: none; }
+
+/* Type: Outline */
+
+    /* Color : Black */
+
+.outline-black{
+    font-family: "Helvetica", sans-serif;
+    color: black;
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px black solid;
+    border-radius: 99px;
+    width:fit-content;
+    
+    justify-content: center;
+}
+
+.outline-black:hover{ opacity: 0.5; }
+
+.outline-black:active{ opacity: 1; }
+
+.outline-black:link, .outline-black:visited{ text-decoration: none; }
+
+    /* Color Primary */
+
+.outline-primary{
+    font-family: "Helvetica", sans-serif;
+    color: var(--primary-color);
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px var(--primary-color) solid;
+    border-radius: 99px;
+    width:fit-content;
+
+    justify-content: center;
+}
+
+.outline-primary:hover{ opacity: 0.5; }
+
+.outline-primary:active{ opacity: 1; }
+
+.outline-primary:link, .outline-primary:visited{ text-decoration: none; }
+
+/* Type: Filled */
+
+    /* Color: Black */
+
+.filled-black{
+    font-family: "Helvetica", sans-serif;
+    color: white;
+    background-color: black;
+    padding: 8px 16px;
+    border: 1px black solid;
+    border-radius: 99px;
+    width:fit-content;
+    
+    justify-content: center;
+}
+
+.filled-black:hover{ opacity: 0.5; }
+
+.filled-black:active{ opacity: 1; }
+
+.filled-black:link, .filled-black:visited{ text-decoration: none; }
+
+.filled-primary{
+    font-family: "Helvetica", sans-serif;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    border: 1px var(--primary-color) solid;
+    border-radius: 99px;
+    width:fit-content;
+    
+    justify-content: center;
+}
+
+.filled-primary:hover{ opacity: 0.5; }
+
+.filled-primary:active{ opacity: 1; }
+
+.filled-primary:link, .filled-primary:visited { text-decoration: none; }

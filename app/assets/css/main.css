@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* ================= THEME COLORS ================= */
+@theme static {
+
+  --container-full: 100%;
+
+  --color-green-50: oklch(0.923 0.115 144.2);
+  --color-green-100: oklch(0.843 0.217 144.2);
+  --color-green-200: oklch(0.763 0.196 144.2);
+  --color-green-300: oklch(0.683 0.176 144.2);
+  --color-green-400: oklch(0.603 0.155 144.2);
+  --color-green-500: oklch(0.523 0.135 144.2);
+  --color-green-600: oklch(0.443 0.114 144.2);
+  --color-green-700: oklch(0.363 0.093 144.2);
+  --color-green-800: oklch(0.283 0.073 144.2);
+  --color-green-900: oklch(0.203 0.052 144.2);
+  --color-green-950: oklch(0.123 0.032 144.2);
+
+  --color-red-50: oklch(0.939 0.027 26.7);
+  --color-red-100: oklch(0.859 0.068 26.7);
+  --color-red-200: oklch(0.779 0.114 26.7);
+  --color-red-300: oklch(0.699 0.170 26.7);
+  --color-red-400: oklch(0.619 0.223 26.7);
+  --color-red-500: oklch(0.539 0.194 26.7);
+  --color-red-600: oklch(0.459 0.165 26.7);
+  --color-red-700: oklch(0.379 0.136 26.7);
+  --color-red-800: oklch(0.299 0.107 26.7);
+  --color-red-900: oklch(0.219 0.079 26.7);
+  --color-red-950: oklch(0.139 0.050 26.7);
+
+  --color-blue-50: oklch(0.950 0.021 264.4);
+  --color-blue-100: oklch(0.887 0.049 264.4);
+  --color-blue-200: oklch(0.824 0.079 264.4);
+  --color-blue-300: oklch(0.761 0.109 264.4);
+  --color-blue-400: oklch(0.698 0.142 264.4);
+  --color-blue-500: oklch(0.635 0.175 264.4);
+  --color-blue-600: oklch(0.571 0.211 264.4);
+  --color-blue-700: oklch(0.508 0.247 264.4);
+  --color-blue-800: oklch(0.445 0.276 264.4);
+  --color-blue-900: oklch(0.382 0.237 264.4);
+  --color-blue-950: oklch(0.319 0.198 264.4);
+
+  --color-yellow-50: oklch(0.950 0.049 84.4);
+  --color-yellow-100: oklch(0.899 0.101 84.4);
+  --color-yellow-200: oklch(0.848 0.155 84.4);
+  --color-yellow-300: oklch(0.797 0.153 84.4);
+  --color-yellow-400: oklch(0.746 0.144 84.4);
+  --color-yellow-500: oklch(0.695 0.134 84.4);
+  --color-yellow-600: oklch(0.643 0.124 84.4);
+  --color-yellow-700: oklch(0.592 0.114 84.4);
+  --color-yellow-800: oklch(0.541 0.104 84.4);
+  --color-yellow-900: oklch(0.490 0.094 84.4);
+  --color-yellow-950: oklch(0.439 0.085 84.4);
+}
+
+:root {
+  --ui-container: var(--container-full);
+  --primary-color: #2e7d32;
+  --primary-color-bg: #2e7d3225;
+  --yellow-color: #fbc02d;
+  --pink-color: #f48fb1;
+  --navy-color: #6767e0;
+  --blue-color: #7ba2f6;
+}
+
+/* ================= TYPOGRAPHY ================= */
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
+}
+
+pre {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.subtext {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.quote {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* ================= PAGE LAYOUT ================= */
+.page {
+  @apply flex flex-col min-h-screen;
+}
+
+.content {
+  @apply flex-1 mx-32;
+}
+
+header {
+  @apply px-32;
+}
+
+th {
+  font-family:'Times New Roman', Times, serif;
+  @apply text-2xl font-bold text-primary p-0 
+}
+
+/* ================= FLEX LAYOUTS ================= */
+.flex-container {
+  @apply flex my-6 gap-x-6;
+}
+
+/* ================= GRID LAYOUTS ================= */
+.grid-half {
+  @apply grid grid-cols-2 gap-8;
+}
+
+.grid-25-75 {
+  @apply grid grid-cols-[1fr_3fr] gap-8 my-6;
+}
+
+.grid-20-80 {
+  @apply grid grid-cols-[20%_80%] gap-8;
+}
+
+.grid-1third {
+  @apply grid grid-cols-3 gap-8 mb-6;
+}
+
+.grid-container {
+  @apply grid justify-between w-fit;
+}
+
+/* ================= COMPONENTS ================= */
+.banner {
+  @apply min-h-[404px] border border-[var(--primary-color)] rounded-[48px] p-8 my-6;
+}
+
+.border-light {
+  @apply border border-[var(--primary-color)] p-8;
+}
+
+.no-border {
+  border: 0;
+}
+
+.column {
+  @apply grid gap-4;
+}
+
+.column-filled {
+  @apply w-full grid py-6 justify-center border border-[var(--primary-color)];
+  align-content: space-evenly; /* Tailwind ไม่มี ต้องเขียนปกติ */
+}
