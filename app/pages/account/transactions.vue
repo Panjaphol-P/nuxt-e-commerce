@@ -2,7 +2,7 @@
 const signupData1 = useState("signupData1");
 const signupData2 = useState("signupData2");
 
-const transactionData = useState("transactionData", () => ({
+const paymentData = useState("paymentData", () => ({
   altEmail: "",
   payType: "",
   cardName: "",
@@ -32,9 +32,19 @@ const registeredDate = `${day} / ${month} / ${year}`;
           <div class="flex flex-col col-span-6 gap-4 w-full">
             <USwitch label="Send to my Account email" description="example@email.com" />
             <UFormField label="Send to an alternative email">
-              <UInput placeholder="alternative_email@email.com" />
+              <UInput placeholder="alternative_email@email.com" class="w-full" />
             </UFormField>
             <USwitch label="I agree to receive news and updates by email." default-value="true" />
+          </div>
+        </div>
+        <div class="rounded-[24px] grid grid-cols-9 ring ring-primary p-6 gap-8">
+          <div class="col-span-3">
+            <h2 class="italic">Payment Methods</h2>
+          </div>
+          <div class="flex flex-col col-span-6 gap-4 w-full">
+            <PaymentCard />
+            <PaymentCard />
+            <UButton variant="ghost" color="neutral" icon="i-lucide-plus" size="lg" label="Add new payment method" class="opacity-50" />
           </div>
         </div>
       </div>
