@@ -2,6 +2,8 @@
 const signupData1 = useState("signupData1");
 const signupData2 = useState("signupData2");
 
+import { vMaska } from "maska/vue"
+
 const date = new Date();
 const day = String(date.getDate()).padStart(2, "0");
 const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -24,7 +26,7 @@ const isEdit = ref(false);
         <div class="flex gap-6 items-center">
           <div class="rounded-full bg-primary-50 size-32"></div>
           <div class="flex flex-col gap-2">
-            <div class="font-light px-4 py-2 text-[32px] text-primary">
+            <div class="font-light px-2.5 py-1.5 text-[32px] text-primary">
               {{ signupData1.username }}
             </div>
             <div class="font-light">{{ signupData2.email }}</div>
@@ -34,50 +36,50 @@ const isEdit = ref(false);
 
         <div class="flex flex-col gap-6">
           <p class="!font-bold text-primary">Personal Information</p>
-          <div class="flex gap-8">
+          <div class="flex justify-between">
             <div class="flex flex-col gap-6 px-4">
-              <div>
+              <div class="flex flex-col gap-2">
                 <p class="text-primary">Name</p>
-                <span class="text-[16px]">{{ signupData2.name }}</span>
+                <span class="px-2.5 py-1.5">{{ signupData2.name }}</span>
               </div>
-              <div>
+              <div class="flex flex-col gap-2">
                 <p class="text-primary">Phone</p>
-                <span class="text-[16px]">{{ signupData2.phone }}</span>
+                <span class="px-2.5 py-1.5">{{ signupData2.phone }}</span>
               </div>
             </div>
-            <div class="w-full flex flex-col gap-6 px-4">
-              <div>
+            <div class="min-w-[350px] max-w[450px] flex flex-col gap-6 px-4">
+              <div class="flex flex-col gap-2">
                 <p class="text-primary">Street Address</p>
-                <span class="text-[16px]">{{ signupData2.streetAddress }}</span>
+                <span class="px-2.5 py-1.5">{{ signupData2.streetAddress }}</span>
               </div>
               <div class="flex gap-4">
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Subdistrict</p>
-                  <span class="text-[16px]">{{ signupData2.subdistrict }}</span>
+                  <span class="px-2.5 py-1.5">{{ signupData2.subdistrict }}</span>
                 </div>
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">District</p>
-                  <span class="text-[16px]">{{ signupData2.district }}</span>
+                  <span class="px-2.5 py-1.5">{{ signupData2.district }}</span>
                 </div>
               </div>
               <div class="flex gap-4">
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">City</p>
-                  <span class="text-[16px]">{{ signupData2.city }}</span>
+                  <span class="px-2.5 py-1.5">{{ signupData2.city }}</span>
                 </div>
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Province</p>
-                  <span class="text-[16px]">{{ signupData2.province }}</span>
+                  <span class="px-2.5 py-1.5">{{ signupData2.province }}</span>
                 </div>
               </div>
               <div class="flex gap-4">
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">ZIP / Postal Code</p>
-                  <span class="text-[16px]">{{ signupData2.zipCode }}</span>
+                  <span class="px-2.5 py-1.5">{{ signupData2.zipCode }}</span>
                 </div>
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Country</p>
-                  <span class="text-[16px]">{{ signupData2.country }}</span>
+                  <span class="px-2.5 py-1.5">{{ signupData2.country }}</span>
                 </div>
               </div>
             </div>
@@ -94,11 +96,11 @@ const isEdit = ref(false);
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Date of Birth</p>
-                <span class="text-[16px]">{{ signupData2.dateOfBirth }}</span>
+                <span class="px-2.5 py-1.5">{{ signupData2.dateOfBirth }}</span>
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Registered Date</p>
-                <span class="text-[16px]">{{ registeredDate }}</span>
+                <span class="px-2.5 py-1.5">{{ registeredDate }}</span>
               </div>
             </div>
           </div>
@@ -122,10 +124,10 @@ const isEdit = ref(false);
           <div class="flex flex-col gap-2">
             <UInput
               v-model="signupData1.username"
-              variant="outline"
+              variant="ghost"
               color="primary"
               highlight
-              class="min-w-[340px] px-4 py-2"
+              class="w-full h-[60px] [&_input]:text-[32px] [&_input]:font-light [&_input]:placeholder:text-[32px]"
               :placeholder="signupData1.username"
             />
             <div class="font-light">{{ signupData2.email }}</div>
@@ -135,50 +137,113 @@ const isEdit = ref(false);
 
         <div class="flex flex-col gap-6">
           <p class="!font-bold text-primary">Personal Information</p>
-          <div class="flex gap-8">
+          <div class="flex justify-between">
             <div class="flex flex-col gap-6 px-4">
-              <div>
+              <div class="flex flex-col gap-2">
                 <p class="text-primary">Name</p>
-                <span class="text-[16px]">{{ signupData2.name }}</span>
+                <UInput
+                  v-model="signupData2.name"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData1.name"
+                />
               </div>
-              <div>
+              <div class="flex flex-col gap-2">
                 <p class="text-primary">Phone</p>
-                <span class="text-[16px]">{{ signupData2.phone }}</span>
+                <UInput
+                  v-model="signupData2.phone"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.phone"
+                />
               </div>
             </div>
-            <div class="w-full flex flex-col gap-6 px-4">
-              <div>
+            <div class="min-w-[350px] max-w[450px] flex flex-col gap-6 px-4">
+              <div class="flex flex-col gap-2">
                 <p class="text-primary">Street Address</p>
-                <span class="text-[16px]">{{ signupData2.streetAddress }}</span>
+                <UInput
+                  v-model="signupData2.streetAddress"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.streetAddress"
+                />
               </div>
               <div class="flex gap-4">
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Subdistrict</p>
-                  <span class="text-[16px]">{{ signupData2.subdistrict }}</span>
+                <UInput
+                  v-model="signupData2.subdistrict"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.subdistrict"
+                />
                 </div>
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">District</p>
-                  <span class="text-[16px]">{{ signupData2.district }}</span>
+                <UInput
+                  v-model="signupData2.district"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.district"
+                />
                 </div>
               </div>
               <div class="flex gap-4">
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">City</p>
-                  <span class="text-[16px]">{{ signupData2.city }}</span>
+                <UInput
+                  v-model="signupData2.city"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.city"
+                />
                 </div>
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Province</p>
-                  <span class="text-[16px]">{{ signupData2.province }}</span>
+                <UInput
+                  v-model="signupData2.province"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.province"
+                />
                 </div>
               </div>
               <div class="flex gap-4">
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">ZIP / Postal Code</p>
-                  <span class="text-[16px]">{{ signupData2.zipCode }}</span>
+                <UInput
+                  v-model="signupData2.zipCode"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.zipCode"
+                />
                 </div>
-                <div class="w-full">
+                <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Country</p>
-                  <span class="text-[16px]">{{ signupData2.country }}</span>
+                <UInput
+                  v-model="signupData2.country"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  :placeholder="signupData2.country"
+                />
                 </div>
               </div>
             </div>
@@ -195,11 +260,19 @@ const isEdit = ref(false);
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Date of Birth</p>
-                <span class="text-[16px]">{{ signupData2.dateOfBirth }}</span>
+                <UInput
+                  v-model="signupData2.dateOfBirth"
+                  variant="ghost"
+                  color="primary"
+                  highlight
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  v-maska="'## / ## / ####'"
+                  :placeholder="signupData2.dateOfBirth"
+                />
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Registered Date</p>
-                <span class="text-[16px]">{{ registeredDate }}</span>
+                <span>{{ registeredDate }}</span>
               </div>
             </div>
           </div>
@@ -216,3 +289,5 @@ const isEdit = ref(false);
     </div>
   </UContainer>
 </template>
+
+<style scoped></style>
