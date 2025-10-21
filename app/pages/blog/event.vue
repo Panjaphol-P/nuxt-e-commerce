@@ -2,6 +2,9 @@
 </script>
 
 <template>
+
+    <BackButton />
+
     <UContainer class="grid grid-cols-3 gap-8 !px-0 my-6">
         <div class="col-span-2 flex flex-col gap-6">
             <div class="w-full min-h-[321px] bg-gray-400 rounded-2xl grid place-items-center">

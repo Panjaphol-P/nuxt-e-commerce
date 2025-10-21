@@ -5,8 +5,11 @@ definePageMeta({
 </script>
 
 <template>
+
+    <div class="px-32"><BackButton /></div>
+
     <section class="w-screen">
-        <UContainer class="!max-w-none !w-full h-svh grid grid-cols-2 gap-8 mb-6 !px-0">
+        <UContainer class="!max-w-none !w-full h-fit grid grid-cols-2 gap-8 mb-6 !px-0">
             <div class="grid place-items-center relative">
                 <NuxtImg src="/icons/Product_vector.svg" class="h-fit w-full" />
                 <NuxtImg src="/products/Product_Showcase/product1.png"

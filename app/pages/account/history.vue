@@ -2,6 +2,9 @@
 </script>
 
 <template>
+
+    <BackButton />
+
     <UContainer class="!px-0 flex flex-col gap-6">
         <div class="flex justify-between items-center">
             <h1 class="italic">Purchase History</h1>

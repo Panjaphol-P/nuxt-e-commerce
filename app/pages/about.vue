@@ -5,7 +5,7 @@
 </script>
 
 <template>
-
+ 
     <LineSight1 />
     
     <UContainer class="!px-32 min-h-[318px] grid grid-cols-12 grid-rows-4 gap-x-8 gap-y-6 my-6">

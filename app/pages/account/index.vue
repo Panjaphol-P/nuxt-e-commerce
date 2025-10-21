@@ -14,6 +14,9 @@ const isEdit = ref(false);
 </script>
 
 <template>
+
+  <BackButton />
+
   <UContainer class="!px-0 flex flex-col gap-8">
     <h1 class="italic">Profile</h1>
     <div class="w-full grid grid-cols-12 gap-8">
@@ -37,53 +40,53 @@ const isEdit = ref(false);
         <div class="flex flex-col gap-6">
           <p class="!font-bold text-primary">Personal Information</p>
           <div class="flex justify-between">
-            <div class="flex flex-col gap-6 px-4">
+            <div class="flex flex-col gap-6 px-4 min-w-[226px]">
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Name</p>
-                <span class="px-2.5 py-1.5">{{ signupData2.name }}</span>
+                <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.name }}</span>
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Phone</p>
-                <span class="px-2.5 py-1.5">{{ signupData2.phone }}</span>
+                <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.phone }}</span>
               </div>
             </div>
-            <div class="min-w-[350px] max-w[450px] flex flex-col gap-6 px-4">
+            <div class="w-full max-w-[400px] flex flex-col gap-6 px-4">
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Street Address</p>
-                <span class="px-2.5 py-1.5">{{ signupData2.streetAddress }}</span>
+                <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.streetAddress }}</span>
               </div>
               <div class="flex gap-4">
                 <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Subdistrict</p>
-                  <span class="px-2.5 py-1.5">{{ signupData2.subdistrict }}</span>
+                  <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.subdistrict }}</span>
                 </div>
                 <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">District</p>
-                  <span class="px-2.5 py-1.5">{{ signupData2.district }}</span>
+                  <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.district }}</span>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">City</p>
-                  <span class="px-2.5 py-1.5">{{ signupData2.city }}</span>
+                  <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.city }}</span>
                 </div>
                 <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Province</p>
-                  <span class="px-2.5 py-1.5">{{ signupData2.province }}</span>
+                  <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.province }}</span>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">ZIP / Postal Code</p>
-                  <span class="px-2.5 py-1.5">{{ signupData2.zipCode }}</span>
+                  <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.zipCode }}</span>
                 </div>
                 <div class="w-full flex flex-col gap-2">
                   <p class="text-primary">Country</p>
-                  <span class="px-2.5 py-1.5">{{ signupData2.country }}</span>
+                  <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.country }}</span>
                 </div>
               </div>
             </div>
-            <div class="flex flex-col gap-6 px-4">
+            <div class="flex flex-col gap-6 px-4 min-w-[200px]">
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Password</p>
                 <UButton
@@ -96,11 +99,11 @@ const isEdit = ref(false);
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Date of Birth</p>
-                <span class="px-2.5 py-1.5">{{ signupData2.dateOfBirth }}</span>
+                <span class="px-2.5 py-1.5 min-h-9">{{ signupData2.dateOfBirth }}</span>
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Registered Date</p>
-                <span class="px-2.5 py-1.5">{{ registeredDate }}</span>
+                <span class="px-2.5 py-1.5 min-h-9">{{ registeredDate }}</span>
               </div>
             </div>
           </div>
@@ -157,12 +160,12 @@ const isEdit = ref(false);
                   variant="ghost"
                   color="primary"
                   highlight
-                  class="w-full [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
+                  class="w-full min-h-9 [&_input]:text-[16px] [&_input]:font-light [&_input]:placeholder:text-[16px]"
                   :placeholder="signupData2.phone"
                 />
               </div>
             </div>
-            <div class="min-w-[350px] max-w[450px] flex flex-col gap-6 px-4">
+            <div class="w-[400px] max-w[400px] flex flex-col gap-6 px-4">
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Street Address</p>
                 <UInput
@@ -247,7 +250,7 @@ const isEdit = ref(false);
                 </div>
               </div>
             </div>
-            <div class="flex flex-col gap-6 px-4">
+            <div class="flex flex-col gap-6 px-4 max-w-[200px]">
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Password</p>
                 <UButton
@@ -272,7 +275,7 @@ const isEdit = ref(false);
               </div>
               <div class="flex flex-col gap-2">
                 <p class="text-primary">Registered Date</p>
-                <span>{{ registeredDate }}</span>
+                <span class="px-2.5 py-1.5 min-h-9">{{ registeredDate }}</span>
               </div>
             </div>
           </div>

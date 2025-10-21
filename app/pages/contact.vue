@@ -31,6 +31,9 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
 </script>
 
 <template>
+
+    <BackButton />
+
     <UContainer class="h-fit flex gap-8 my-6 !px-0">
         <div class="w-1/2 h-full flex flex-col space-y-6">
             <h1 class="text-[64px] italic">Contact Us</h1>
