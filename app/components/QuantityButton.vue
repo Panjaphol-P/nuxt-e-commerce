@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    const quantity = ref(0)
+    const quantity = ref(1)
     import { ref } from 'vue'
 
     const increase = () => {
@@ -7,7 +7,7 @@
     }
 
     const decrease = () => {
-        if (quantity.value > 0) {
+        if (quantity.value > 1) {
             quantity.value--
         }
     }

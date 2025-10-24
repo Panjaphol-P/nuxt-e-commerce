@@ -10,10 +10,10 @@ const isLoggedIn = useState('isLoggedIn', () => false)
 
 // Initialize demo data for mockup
 const signupData1 = useState('signupData1', () => ({
-    username: 'DemoUser'
+    username: ''
 }))
 const signupData2 = useState('signupData2', () => ({
-    email: 'demo@purea.com'
+    email: ''
 }))
 
 // Add the handleSignIn function

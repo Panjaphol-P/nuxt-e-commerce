@@ -135,6 +135,7 @@ const registeredDate = `${day} / ${month} / ${year}`;
                         trailing-icon="i-lucide-shield-check"
                         size="lg"
                         class="w-20"
+                        :ui="{ trailingIcon: 'text-primary' }"
                       />
                     </UFormField>
                   </div>

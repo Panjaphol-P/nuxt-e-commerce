@@ -2,6 +2,20 @@
 definePageMeta({
     layout: 'custom',
 })
+
+const toast = useToast()
+
+function showToast() {
+  toast.add({
+    title: 'Product Name has been added to cart!',
+    icon: 'i-lucide-shopping-bag',
+    close: {
+      color: 'neutral',
+      variant: 'ghost',
+      class: 'rounded-full'
+    }
+  })
+}
 </script>
 
 <template>
@@ -66,7 +80,7 @@ definePageMeta({
                     <div class="flex justify-end gap-8">
                         <QuantityButton />
                         <UButton icon="i-lucide-shopping-bag" class="rounded-full gap-2 px-4 py-2" color="primary"
-                            label="Add to Cart" />
+                            @click="showToast" label="Add to Cart" />
                     </div>
                 </div>
             </div>

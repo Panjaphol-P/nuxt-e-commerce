@@ -1,10 +1,10 @@
 <script setup>
 definePageMeta({
-    layout: 'signIn'
+    layout: 'sign-in'
 })
 
 const signupData1 = useState('signupData1', () => ({
-    username: 'DemoUser',
+    username: '' || 'Username01',
     password: '',
     confirmPassword: ''
 }))
@@ -30,7 +30,7 @@ const show2 = ref(false)
                         </div>
                     </div>
                     <UFormField label="Username" required class="w-full">
-                        <UInput v-model="signupData1.username" class="w-full" color="primary" />
+                        <UInput v-model="signupData1.username" placeholder="Enter your username" class="w-full" color="primary" />
                     </UFormField>
                     <UFormField label="Password" help="Must contain more than 8 characters">
                         <UInput

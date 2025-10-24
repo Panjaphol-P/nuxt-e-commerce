@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-    layout: 'signIn'
+    layout: 'sign-in'
 })
 
 import { vMaska } from "maska/vue"
@@ -156,7 +156,7 @@ const countries = ref([
 
 const signupData2 = useState('signupData2', () => ({
     name: 'Name Surname',
-    email: 'demo@purea.com',
+    email: 'example@purea.com',
     phone: '+66 12 345 6789',
     dateOfBirth: '01 / 01 / 1990',
     streetAddress: '123 Demo Street',
