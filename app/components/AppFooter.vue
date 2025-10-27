@@ -2,7 +2,7 @@
     <footer class="h-[405px] bg-primary text-white p-10 rounded-t-[48px] mt-8">
         <UContainer class="h-full flex space-x-6">
             <div class="min-w-[372px] h-full flex flex-col justify-between items-center">
-                <h1 class="!text-[128px] !text-white !font-bold">Puréa</h1>
+                <NuxtLink to="/home"><h1 class="!text-[128px] !text-white !font-bold">Puréa</h1></NuxtLink>
                 <div class="flex flex-col items-center space-y-8">
                     <div class="flex space-x-4">
                         <UIcon name="i-custom-facebook" size="40px" />
@@ -22,27 +22,27 @@
                 <div class="grid grid-cols-4">
                     <div class="flex flex-col space-y-4">
                         <div class="font-bold">CATALOG</div>
-                        <div>Essentials</div>
-                        <div>Latest Creations</div>
-                        <div>Seasonal Picks</div>
+                        <NuxtLink to="/catalog">Essentials</NuxtLink>
+                        <NuxtLink to="/catalog">Latest Creations</NuxtLink>
+                        <NuxtLink to="/catalog">Seasonal Picks</NuxtLink>
                     </div>
                     <div class="flex flex-col space-y-4">
                         <div class="font-bold">BLOG</div>
-                        <div>Events</div>
-                        <div>Trending</div>
-                        <div>Announcements</div>
+                        <NuxtLink to="/blog">Events</NuxtLink>
+                        <NuxtLink to="/blog">Trending</NuxtLink>
+                        <NuxtLink to="/blog">Announcements</NuxtLink>
                     </div>
                     <div class="flex flex-col space-y-4">
                         <div class="font-bold">CONTACT</div>
-                        <div>About Us</div>
-                        <div>FAQs</div>
-                        <div>Contacts</div>
+                        <NuxtLink to="/about">About Us</NuxtLink>
+                        <NuxtLink to="/contact">FAQs</NuxtLink>
+                        <NuxtLink to="/contact">Contacts</NuxtLink>
                     </div>
                     <div class="flex flex-col space-y-4">
                         <div class="font-bold">HELP</div>
-                        <div>My Account</div>
-                        <div>Tracking Order</div>
-                        <div>Help Center</div>
+                        <NuxtLink to="/account">My Account</NuxtLink>
+                        <NuxtLink to="/account/history">Tracking Order</NuxtLink>
+                        <NuxtLink to="/help">Help Center</NuxtLink>
                     </div>
                 </div>
 

@@ -76,7 +76,7 @@
 </script>
 
 <template>
-    <div class="relative overflow-hidden min-h-[124px]">
+    <div class="relative overflow-hidden min-h-[124px] h-full">
         <TransitionGroup
             enter-active-class="transition-transform duration-500 ease-out absolute inset-0"
             leave-active-class="transition-transform duration-500 ease-out absolute inset-0"
@@ -85,7 +85,7 @@
             leave-from-class="translate-x-0"
             :leave-to-class="transitionClasses.leaveTo"
         >
-            <div v-if="!clickState && help === 'updateAndcancel'" key="update" class="grid grid-cols-6 gap-8 min-h-[124px]">
+            <div v-if="!clickState && help === 'updateAndcancel'" key="update" class="grid grid-cols-6 gap-8 min-h-[124px] h-full">
                 <div class="col-span-1">
 
                 </div>
@@ -125,7 +125,7 @@
                 </div>
             </div>
 
-            <div v-if="clickState" key="help" class="grid grid-cols-6 gap-8 min-h-[124px]">
+            <div v-if="clickState" key="help" class="grid grid-cols-6 gap-8 min-h-[124px] h-full">
                 <div class="col-span-1 grid place-items-center">
                     <UButton variant="ghost" icon="i-lucide-chevron-left" color="primary" :ui="{ leadingIcon: 'w-8 h-8' }" class="rounded-full" @click="handleNavigation(false)" />
                 </div>

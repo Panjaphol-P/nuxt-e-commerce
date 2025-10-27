@@ -30,7 +30,7 @@
     <!--Sorting-->
     <UContainer class="flex my-8 space-x-6 !px-0 h-fit">
         <Filter topic="popularity" />
-        <USeparator orientation="vertical" class="h-full" />
+        <USeparator orientation="vertical" class="h-8" />
         <Filter topic="release_date" />
     </UContainer>
 

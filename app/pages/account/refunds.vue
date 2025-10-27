@@ -239,6 +239,7 @@ const refundOptions = ref<RadioGroupItem[]>([
         </div>
 
         <div class="grid grid-cols-6 gap-8">
+                <HelpCard help="updateAndcancel" class="w-full h-full col-span-3 items-center" />
             <div class="col-start-4 col-span-3 flex flex-col gap-4 p-6 rounded-[32px] ring ring-primary/25">
                 <div v-if="!isEdit">
                     <div class="flex justify-between">
@@ -246,7 +247,7 @@ const refundOptions = ref<RadioGroupItem[]>([
                         <UButton variant="outline" icon="i-lucide-pencil-line" color="primary" label="Edit Address"
                             class="rounded-full px-4 py-2" @click="isEdit = true" />
                     </div>
-                    <div class="flex justify-between">
+                    <div class="flex gap-8">
                         <div class="flex flex-col gap-4">
                             <div class="flex gap-2 px-2.5 py-1.5 items-center">
                                 <UIcon name="i-lucide-user-round" class="text-primary" size="24px" />
@@ -262,7 +263,7 @@ const refundOptions = ref<RadioGroupItem[]>([
                             </div>
                         </div>
 
-                        <div class="flex gap-2 px-2.5">
+                        <div class="flex gap-2 px-2.5 py-1.5">
                             <UIcon name="i-lucide-map-pin" class="text-primary" size="24px" />
                             <div class="flex flex-col gap-2">
                                 <span class="text-black font-light">{{ signupData2.streetAddress || '123 Main St, Anytown, USA' }}</span>
@@ -279,32 +280,42 @@ const refundOptions = ref<RadioGroupItem[]>([
                         <UButton variant="outline" icon="i-lucide-check" color="primary" label="Save Changes"
                             class="rounded-full px-4 py-2" @click="isEdit = false" />
                     </div>
-                    <div class="flex justify-between">
+                    <div class="flex gap-8"> 
                         <div class="flex flex-col gap-4">
                             <div class="flex gap-2 px-2.5 py-1.5 items-center">
                                 <UIcon name="i-lucide-user-round" class="text-primary" size="24px" />
-                                <UInput variant="ghost" :placeholder="signupData2.name || 'Guest User'" class="w-full" />
+                                <UInput variant="outline" :placeholder="signupData2.name || 'Guest User'" class="w-full" />
                             </div>
                             <div class="flex gap-2 px-2.5 py-1.5 items-center">
                                 <UIcon name="i-lucide-mail" class="text-primary" size="24px" />
-                                <UInput variant="ghost" :placeholder="signupData2.email || 'example@email.com'" class="w-full" />
+                                <UInput variant="outline" :placeholder="signupData2.email || 'example@email.com'" class="w-full" />
                             </div>
                             <div class="flex gap-2 px-2.5 py-1.5 items-center">
                                 <UIcon name="i-lucide-phone" class="text-primary" size="24px" />
-                                <UInput variant="ghost" :placeholder="signupData2.phone || '+00 12 345 6789'" class="w-full" />
+                                <UInput variant="outline" :placeholder="signupData2.phone || '+00 12 345 6789'" class="w-full" />
                             </div>
                         </div>
 
-                        <div class="flex gap-2 px-2.5">
-                            <UIcon name="i-lucide-map-pin" class="text-primary" size="24px" />
+                        <div class="flex gap-2 py-1.5">
+                            <div class="">
+                                <UIcon name="i-lucide-map-pin" class="text-primary" size="24px"  />
+                            </div>
                             <div class="flex flex-col gap-2">
-                                <UInput variant="ghost" :placeholder="signupData2.streetAddress || '123 Main St, Anytown, USA'" class="w-full" />
-                                <UInput variant="ghost" :placeholder="signupData2.subDistrict || 'Subdistrict'" class="w-full" />
-                                <UInput variant="ghost" :placeholder="signupData2.district || 'District'" class="w-full" />
-                                <UInput variant="ghost" :placeholder="signupData2.city || 'City'" class="w-full" />
-                                <UInput variant="ghost" :placeholder="signupData2.province || 'Province'" class="w-full" />
-                                <UInput variant="ghost" :placeholder="signupData2.zipCode || 'Zip Code'" class="w-full" />
-                                <UInput variant="ghost" :placeholder="signupData2.country || 'Country'" class="w-full" />
+                                <div class="flex gap-2">
+                                    <UInput variant="outline" :placeholder="signupData2.streetAddress || '123 Main St, Anytown, USA'" class="w-full" />
+                                </div>
+                                <div class="flex gap-2">
+                                    <UInput variant="outline" :placeholder="signupData2.subDistrict || 'Subdistrict'" class="w-full" />
+                                    <UInput variant="outline" :placeholder="signupData2.district || 'District'" class="w-full" />
+                                </div>
+                                <div class="flex gap-2">
+                                <UInput variant="outline" :placeholder="signupData2.city || 'City'" class="w-full" />
+                                <UInput variant="outline" :placeholder="signupData2.province || 'Province'" class="w-full" />
+                                </div>
+                                <div class="flex gap-2">
+                                    <UInput variant="outline" :placeholder="signupData2.zipCode || 'Zip Code'" class="w-full" />
+                                    <UInput variant="outline" :placeholder="signupData2.country || 'Country'" class="w-full" />
+                                </div>
                             </div>
                         </div>
                     </div>

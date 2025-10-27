@@ -54,7 +54,7 @@ onMounted(() => {
         ctx.arcTo(128, 1878, 128, 2524, radius);
         
         // Point 7 to Point 8 (vertical line)
-        ctx.lineTo(128, 2524);
+        ctx.lineTo(128, 4000);
 
         ctx.stroke();
     }
@@ -63,5 +63,5 @@ onMounted(() => {
 </script>
 
 <template>
-      <canvas ref="myCanvas3" width="1440" height="2524" style="position: absolute; top: 0px; z-index: -20;" class="min-w-[1440px]"></canvas>
+      <canvas ref="myCanvas3" width="1440" height="3000" style="position: absolute; top: 0px; z-index: -20;" class="min-w-[1440px]"></canvas>
 </template>

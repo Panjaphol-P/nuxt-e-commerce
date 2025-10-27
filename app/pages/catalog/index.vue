@@ -78,12 +78,12 @@ const slide_value = ref([
             </UContainer>
 
             <div class="grid grid-cols-3 gap-x-8 gap-y-6">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                <ProductCard tag="bestseller" />
+                <ProductCard tag="bestseller" />
+                <ProductCard tag="bestseller" />
+                <ProductCard tag="bestseller" />
+                <ProductCard tag="bestseller" />
+                <ProductCard tag="bestseller" />
             </div>
 
             <!--NEW RELEASES-->
@@ -93,12 +93,12 @@ const slide_value = ref([
             </UContainer>
 
             <div class="grid grid-cols-3 gap-x-8 gap-y-6">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                <ProductCard tag="new" />
+                <ProductCard tag="new" />
+                <ProductCard tag="new" />
+                <ProductCard tag="new" />
+                <ProductCard tag="new" />
+                <ProductCard tag="new" />
             </div>
 
             <!--SEASONAL PRODUCT-->

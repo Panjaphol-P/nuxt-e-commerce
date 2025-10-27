@@ -26,7 +26,7 @@ function showToast() {
         <UContainer class="!max-w-none !w-full h-fit grid grid-cols-2 gap-8 mb-6 !px-0">
             <div class="grid place-items-center relative">
                 <NuxtImg src="/icons/Product_vector.svg" class="h-fit w-full" />
-                <NuxtImg src="/products/Product_Showcase/product1.png"
+                <NuxtImg src="/products/product1-thn.png"
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-fit min-h-[500px] w-fit" />
             </div>
 
@@ -246,9 +246,7 @@ function showToast() {
             <ReviewCard />
 
             <UContainer class="min-h-[62px] grid place-items-center">
-                <div class="px-4 py-2 ring ring-primary rounded-full">
-                    <span class="text-primary">*pagination*</span>
-                </div>
+                <PaginationFull />
             </UContainer>
 
         </UContainer>

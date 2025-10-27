@@ -18,7 +18,8 @@ const language = ref(['TH', 'EN'])
                 <USeparator orientation="vertical" color="neutral" class="h-full" />
                 <NuxtLink to="/about">About Us</NuxtLink>
             </div>
-            <div v-if="!isLoggedIn" class="flex items-center">
+            <div v-if="!isLoggedIn" class="flex items-center gap-6">
+                <USelect icon="i-lucide-globe" variant="ghost" default-value="TH" color="neutral" :items="language" class="!text-black" />
                 <NuxtLink class="outline-primary" to="/sign-in">SIGN IN</NuxtLink>
             </div>
             <div v-else class="flex items-center gap-6">
