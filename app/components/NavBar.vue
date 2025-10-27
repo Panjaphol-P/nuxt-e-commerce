@@ -4,7 +4,7 @@ const language = ref(['TH', 'EN'])
 </script>
 
 <template>
-    <nav>
+    <nav class="bg-transparent backdrop-filter-none">
         <div class="flex justify-between relative">
             <div style="width:fit-content;">
                 <NuxtLink class="brand" to="/home">Puréa</NuxtLink>

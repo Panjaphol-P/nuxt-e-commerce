@@ -2,7 +2,7 @@
 import type Tags from "~/components/Tags.vue";
 
 definePageMeta({
-  layout: "default",
+  layout: "custom",
 });
 
 const testimonials = [
@@ -65,8 +65,13 @@ const productItems = [
 </script>
 
 <template>
+  <NuxtImg src="/flower.png" class="absolute top-4 -right-50 size-[400px] rotate-45 " />
+  <NuxtImg src="/flower.png" class="absolute -bottom-70 -left-50 size-[400px] rotate-64 " />
+  <NuxtImg src="/flower.png" class="absolute -right-45 -bottom-[1250px] size-[400px] -rotate-131 " />
+  <NuxtImg src="/flower.png" class="absolute -left-50 -bottom-[2500px] size-[400px] rotate-65 " />
+  <NuxtImg src="/flower.png" class="absolute -right-50 -bottom-[3000px] size-[400px] rotate-43 " />
   <!--INTRODUCTION-->
-  <div class="w-full h-svh grid grid-cols-2 gap-6 items-center my-6">
+  <div class="w-full h-svh grid grid-cols-2 gap-6 items-center my-6 px-32">
     <!--LEFT-->
     <div class="w-full h-fit grid content-center gap-6 px-16">
       <h1 class="font-bold text-[40px]">Puréa</h1>
@@ -79,11 +84,6 @@ const productItems = [
       <NuxtLink to="/catalog" class="filled-primary">SHOP NOW</NuxtLink>
     </div>
 
-    <!--RIGHT 
-        *WIP* :
-        1. position middle
-        2. image resize
-        -->
     <div class="relative h-4/5 w-full grid place-items-center">
       <!-- Background frame -->
       <NuxtImg
@@ -119,7 +119,7 @@ const productItems = [
 
   <!--CATALOG SECTION-->
 
-  <div class="w-full h-svh grid grid-cols-2 gap-6 items-center mb-6">
+  <div class="w-full h-svh grid grid-cols-2 gap-6 items-center mb-6 px-32">
     <!--LATEST PRODUCT-->
     <UContainer class="space-y-6 !px-0">
       <h1 class="italic">Chosen With Care</h1>
@@ -161,7 +161,7 @@ const productItems = [
   </div>
 
   <!--BLOG SECTION-->
-  <div class="w-full flex flex-col space-y-6 mb-6">
+  <div class="w-full flex flex-col space-y-6 mb-6 px-32">
     <h1 class="italic">Where Knowledge & Beauty Meet</h1>
     <UContainer class="w-full grid grid-cols-3 gap-8 !mx-0 !p-0">
       <BlogCard tag="tips" />
@@ -174,7 +174,7 @@ const productItems = [
   </div>
 
   <!--SHORT STORY-->
-  <div class="w-full h-svh mb-6 flex items-center">
+  <div class="w-full h-svh mb-6 flex items-center px-32">
     <UContainer
       class="w-full h-[80%] grid grid-cols-2 gap-x-8 gap-y-6 !m-0 !p-0"
     >
@@ -220,8 +220,8 @@ const productItems = [
     </UContainer>
   </div>
 
-  <div class="w-full h-svh flex flex-col justify-center gap-6">
-    <h1 class="italic">Voices That Trust Us</h1>
+  <div class="w-full h-fit flex flex-col justify-center gap-6">
+    <h1 class="italic px-32">Voices That Trust Us</h1>
 
     <UMarquee
       :overlay="false"
