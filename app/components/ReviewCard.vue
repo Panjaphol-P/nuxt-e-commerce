@@ -4,15 +4,17 @@
 <template>
     <UContainer class="min-h-[147px] flex gap-8 !px-0">
         <!-- Image -->
-        <div class="min-w-[147px] min-h-[147px] bg-gray-400 rounded-[8px] grid place-items-center">
-            <h3 class="!text-white">*img*</h3>
+        <div class="min-w-[147px] min-h-[147px] bg-primary/10 rounded-[8px] grid place-items-center">
+            <UIcon name="i-lucide-image" size="40px" />
         </div>
 
         <!-- Right content -->
         <div class="flex flex-col gap-6">
             <div class="flex h-fit gap-4 items-center justify-start">
                 <div class="flex gap-2 items-center">
-                    <div class="size-8 bg-gray-400 rounded-full"></div>
+                    <div class="size-8 bg-primary/10 rounded-full grid place-items-center">
+                        <UIcon name="i-lucide-image" />
+                    </div>
                     <span>example01_account</span>
                 </div>
                 <div class="flex gap-2 h-full items-center">

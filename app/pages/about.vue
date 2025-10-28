@@ -10,8 +10,9 @@ definePageMeta({
   <UContainer
     class="!px-32 min-h-[318px] grid grid-cols-12 grid-rows-4 gap-x-8 gap-y-6 my-6"
   >
-    <div class="col-span-5 row-span-4 bg-gray-400 grid place-items-center">
-      *Img*
+    <div class="col-span-5 row-span-4 grid place-items-center relative">
+      <NuxtImg src="/about/thumbnail1.png" class="w-full" />
+      <p class="absolute bottom-4 right-6 italic text-black">"From roots to reach — Together."</p>
     </div>
     <div
       class="row-start-2 col-start-8 col-span-4 flex items-center justify-end"
@@ -63,19 +64,19 @@ definePageMeta({
       class="row-start-5 col-start-3 row-span-3 col-span-9 flex justify-between items-center"
     >
       <div
-        class="min-w-[272px] max-h-[272px] h-full bg-gray-400 grid place-items-center rounded-[8px]"
+        class="min-w-[272px] max-h-[272px] h-full grid place-items-center rounded-[8px]"
       >
-        *Img*
+        <NuxtImg src="/about/team1.png" class="w-full h-full" />
       </div>
       <div
-        class="min-w-[272px] max-h-[272px] h-full bg-gray-400 grid place-items-center rounded-[8px]"
+        class="min-w-[272px] max-h-[272px] h-full  grid place-items-center rounded-[8px]"
       >
-        *Img*
+        <NuxtImg src="/about/team2.png" class="w-full h-full" />
       </div>
       <div
-        class="min-w-[272px] max-h-[272px] h-full bg-gray-400 grid place-items-center rounded-[8px]"
+        class="min-w-[272px] max-h-[272px] h-full  grid place-items-center rounded-[8px]"
       >
-        *Img*
+        <NuxtImg src="/about/team3.png" class="w-full h-full" />
       </div>
     </div>
     <div class="row-start-8 col-span-full">
@@ -128,14 +129,14 @@ definePageMeta({
       class="col-span-8 row-start-2 col-start-3 row-span-3 flex justify-between items-center"
     >
       <div
-        class="min-w-[272px] max-h-[272px] h-full bg-gray-400 rounded-[8px]"
-      ></div>
+        class="min-w-[272px] max-h-[272px] h-full rounded-[8px]"
+      > <NuxtImg src="/about/coop1.png" class="w-full h-full" /> </div>
       <div
-        class="min-w-[272px] max-h-[272px] h-full bg-gray-400 rounded-[8px]"
-      ></div>
+        class="min-w-[272px] max-h-[272px] h-full rounded-[8px]"
+      > <NuxtImg src="/about/coop2.png" class="w-full h-full" /> </div>
       <div
-        class="min-w-[272px] max-h-[272px] h-full bg-gray-400 rounded-[8px]"
-      ></div>
+        class="min-w-[272px] max-h-[272px] h-full rounded-[8px]"
+      > <NuxtImg src="/about/coop3.png" class="w-full h-full" /> </div>
     </div>
   </UContainer>
 
@@ -149,19 +150,29 @@ definePageMeta({
       <h2 class="!text-black">The medal of trustworthy.</h2>
     </div>
     <div
-      class="row-start-2 row-span-7 col-start-6 col-end-12 ring ring-primary"
-    ></div>
+      class="row-start-2 row-span-7 col-start-8 col-end-12 overflow-y-scroll h-[608px] flex flex-col items-center gap-6"
+    >
+      <ReviewCardAbout />
+      <ReviewCardAbout />
+      <ReviewCardAbout />
+      <ReviewCardAbout />
+      <ReviewCardAbout />
+      <ReviewCardAbout />
+      <ReviewCardAbout />
+    </div>
   </UContainer>
 
   <UContainer class="grid grid-cols-12 grid-row-6 gap-x-8 gap-y-6 !px-0">
     <div class="col-span-full h-[56px]"></div>
 
     <div
-      class="row-start-2 row-span-4 col-start-3 col-span-4 flex flex-col justify-center gap-6 min-h-[468px]"
+      class="row-start-2 row-span-4 col-start-3 col-span-4 flex flex-col justify-center gap-6 min-h-[760px]"
     >
       <FAQs question="How do I find my skin type?">
         <template #answer>
-          We've create <span class="text-primary font-bold">"Search Skin"</span> test yo help you understand yourself even more.
+          We've create
+          <span class="text-primary font-bold">"Search Skin"</span> test yo help
+          you understand yourself even more.
         </template>
       </FAQs>
       <FAQs question="Are your prodeucts actually organic?">
@@ -175,7 +186,9 @@ definePageMeta({
       >
         <template #answer>
           For basics you need
-          <span class="text-primary font-bold">face wash, toner, moisturizer, body lotion</span>
+          <span class="text-primary font-bold"
+            >face wash, toner, moisturizer, body lotion</span
+          >
           and finally <span class="text-primary font-bold">sunscreen</span>.
         </template>
       </FAQs>
@@ -183,7 +196,9 @@ definePageMeta({
         <template #answer>
           You can easily track your order by checking the confirmation email we
           sent — it includes a tracking link! Or simply sign in to your account
-          and head to <span class="text-primary font-bold">"Purchase History"</span> to see the latest updates.
+          and head to
+          <span class="text-primary font-bold">"Purchase History"</span> to see
+          the latest updates.
         </template>
       </FAQs>
     </div>

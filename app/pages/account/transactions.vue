@@ -62,8 +62,8 @@ const registeredDate = `${day} / ${month} / ${year}`;
             <h2 class="italic">Payment Methods</h2>
           </div>
           <div class="flex flex-col col-span-6 gap-4 w-full">
-            <PaymentCard />
-            <PaymentCard />
+            <PaymentCard type="credit" />
+            <PaymentCard type="debit" />
             <UModal v-model:open="open">
               <UButton
                 variant="ghost"

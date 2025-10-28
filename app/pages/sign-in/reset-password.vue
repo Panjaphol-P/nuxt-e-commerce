@@ -29,7 +29,7 @@ const show2 = ref(false)
 
                 <UFormField help="Must be at least 8 characters" class="">
                     <UInput v-model="password" icon="i-lucide-lock" placeholder="New Password" highlight
-                        :type="show ? 'text' : 'password'" :ui="{ trailing: 'pe-1' }" class="min-w-[400px]">
+                        :type="show ? 'text' : 'password'" :ui="{ trailing: 'pe-1', leadingIcon: 'text-primary' }" size="xl" class="min-w-[400px]">
                         <template #trailing>
                             <UButton color="neutral" variant="link" size="sm"
                                 :icon="show ? 'i-lucide-eye' : 'i-lucide-eye-off'"
@@ -41,7 +41,7 @@ const show2 = ref(false)
 
                 <UFormField help="Both passwords must match" class="">
                     <UInput v-model="confirmPassword" icon="i-lucide-lock" placeholder="Confirm Password" highlight
-                        :type="show2 ? 'text' : 'password'" :ui="{ trailing: 'pe-1' }" class="min-w-[400px]">
+                        :type="show2 ? 'text' : 'password'" :ui="{ trailing: 'pe-1', leadingIcon: 'text-primary' }" size="xl" class="min-w-[400px]">
                         <template #trailing>
                             <UButton color="neutral" variant="link" size="sm"
                                 :icon="show2 ? 'i-lucide-eye' : 'i-lucide-eye-off'"

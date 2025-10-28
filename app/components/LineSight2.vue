@@ -36,25 +36,25 @@ onMounted(() => {
         ctx.arcTo(352, 108, 1088, 108, radius);
         
         // Point 4 to Point 5 (horizontal line)
-        ctx.lineTo(1088 - radius, 108);
+        ctx.lineTo(1540 - radius, 108);
         
         // Rounded corner at Point 5
-        ctx.arcTo(1088, 108, 1088, 588, radius);
+        ctx.arcTo(1540, 108, 1540, 588, radius);
         
         // Point 5 to Point 6 (vertical line)
-        ctx.lineTo(1088, 588 - radius);
+        ctx.lineTo(1540, 588 - radius);
         
         // Rounded corner at Point 6
-        ctx.arcTo(1088, 588, 1312, 588, radius);
+        ctx.arcTo(1540, 588, 1770 , 588, radius);
         
         // Point 6 to Point 7 (horizontal line)
-        ctx.lineTo(1312 - radius, 588);
+        ctx.lineTo(1770 - radius, 588);
         
         // Rounded corner at Point 7
-        ctx.arcTo(1312, 588, 1312, 696, radius);
+        ctx.arcTo(1770, 588, 1770, 696, radius);
         
         // Point 7 to Point 8 (vertical line)
-        ctx.lineTo(1312, 696);
+        ctx.lineTo(1770, 696);
 
         ctx.stroke();
     }
@@ -63,5 +63,5 @@ onMounted(() => {
 </script>
 
 <template>
-      <canvas ref="myCanvas2" width="1440" height="696" style="position: absolute; top: 0px; z-index: -20;" class="min-w-[1440px]"></canvas>
+      <canvas ref="myCanvas2" width="1897" height="696" style="position: absolute; top: 0px; z-index: -20;" class="min-w-[1440px]"></canvas>
 </template>

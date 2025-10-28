@@ -23,7 +23,7 @@ const submitClicked = ref(false)
                 </div>
 
                 <UFormField>
-                    <UInput icon="i-lucide-mail" placeholder="example@email.com" color="primary" highlight
+                    <UInput icon="i-lucide-mail" placeholder="example@email.com" color="primary" size="xl" highlight :ui="{ leadingIcon: 'text-primary' }"
                         class="min-w-[510px]" />
                 </UFormField>
                 <UButton @click="submitClicked = true" label="Send Instructions" variant="solid" color="primary"
