@@ -24,9 +24,9 @@ import QuantityButton from './QuantityButton.vue'
   <div v-if="type === 'unfixed'" class="grid grid-cols-7 gap-6 text-center">
     <div class="col-span-3 flex items-center gap-6">
       <div
-        class="min-h-[64px] min-w-[32px] bg-primary/25 grid place-items-center"
+        class="min-h-[64px] min-w-[32px] grid place-items-center"
       >
-        img
+        <NuxtImg src="/products/cosmetics-packages-set5.png" class="h-16" />
       </div>
       <div class="flex flex-col justify-center">
         <h3 class="font-bold">{{ props.name }}</h3>
@@ -50,9 +50,9 @@ import QuantityButton from './QuantityButton.vue'
   <div v-else class="flex justify-between">
     <div class="flex items-center gap-6">
       <div
-        class="min-h-[64px] min-w-[32px] bg-primary/25 grid place-items-center"
+        class="min-h-[64px] min-w-[32px] grid place-items-center"
       >
-        img
+        <NuxtImg src="/products/cosmetics-packages-set5.png" class="h-16" />
       </div>
       <div class="flex flex-col justify-center">
         <h3 class="font-bold">{{ props.name }}</h3>

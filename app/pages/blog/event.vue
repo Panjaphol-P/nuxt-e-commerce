@@ -22,7 +22,7 @@
         </div>
 
         <!-- Overlay content -->
-        <h1 class="relative !text-black/50">*Thumbnail*</h1>
+        <UIcon name="i-lucide-image" class="size-16 text-black/50 relative" />
       </div>
       <div class="grid grid-cols-8 justify-between gap-8">
         <div class="col-span-6">
@@ -52,7 +52,7 @@
         <div
           class="col-span-3 bg-primary/10 grid place-items-center rounded-[8px]"
         >
-          <h3 class="!text-black/50">*IMG*</h3>
+          <UIcon name="i-lucide-image" class="size-16 text-black/50 relative" />
         </div>
         <div class="col-span-5 h-full grid items-center">
           <span>

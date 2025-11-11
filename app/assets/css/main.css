@@ -169,5 +169,5 @@ th {
 
 .column-filled {
   @apply w-full grid py-6 justify-center border border-[var(--primary-color)];
-  align-content: space-evenly; /* Tailwind ไม่มี ต้องเขียนปกติ */
+  align-content: space-evenly;
 }

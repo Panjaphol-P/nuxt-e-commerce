@@ -46,7 +46,6 @@
                     </div>
                 </div>
 
-                <!-- Bottom aligned -->
                 <div class="w-full flex justify-end space-x-8">
                     <div>Privacy Policy</div>
                     <div>Terms of Use</div>
